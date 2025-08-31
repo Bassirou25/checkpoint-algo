@@ -1,0 +1,26 @@
+algorithme: sommeDistinct 
+
+Fonction sommeDistinct(ensemble1, ensemble2 : entier) 
+somme=0 
+
+   // Ajouter les éléments de ensemble1 absents de ensemble2
+    POUR CHAQUE elem DANS ensemble1 FAIRE
+        SI elem NON DANS ensemble2 ALORS
+            somme = somme + elem
+        FIN SI
+    FIN POUR
+   
+    // Ajouter les éléments de ensemble2 absents de ensemble1
+    POUR CHAQUE elem DANS ensemble2 FAIRE
+        SI elem NON DANS ensemble1 ALORS
+            somme = somme + elem
+        FIN SI
+    FIN POUR
+    
+    RETOURNER somme
+FIN FONCTION
+
+// Exemple
+ensemble1 = [3, 1, 7, 9]
+ensemble2 = [2, 4, 1, 9, 3]
+AFFICHER sommeDistincts(ensemble1, ensemble2)  // Résultat: 13 (7+2+4)
